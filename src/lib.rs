@@ -4,7 +4,7 @@
 //  Created:
 //    31 Oct 2023, 16:07:42
 //  Last edited:
-//    31 Oct 2023, 16:34:52
+//    31 Oct 2023, 16:44:24
 //  Auto updated?
 //    Yes
 //
@@ -63,7 +63,9 @@ pub mod prelude {
 
 
 /***** LIBRARY *****/
-/// An iterator that can map each element in the underlying iterator to zero or more elements of another iterator.
+/// An iterator that applies a closure that can transform an element in the existing iterator into zero or more elements in the resulting iterator.
+///
+/// Note that the closure is _not_ called for the newly produces elements, only for those in the old iterator.
 ///
 /// # Examples
 /// ```rust
@@ -120,13 +122,18 @@ where
 
         // If we haven't got anything in the buffer but we do have an item in the iterator, then get the next buffer
         self.buf = Some((self.func)(next).into_iter());
-        self.buf.as_mut().unwrap().next()
+        // NOTE: The recursive call is mandatory to properly deal with elements that are empty (we need to call the iterator right away)
+        self.next()
     }
 }
 
 
 
 /// A trait that adds the [`transform()`](Transform::transform())-function to all [`Iterator`]s.
+///
+/// This function applies a closure that can transform an element in the existing iterator into zero or more elements in the resulting iterator.
+///
+/// Note that the closure is _not_ called for the newly produces elements, only for those in the old iterator.
 ///
 /// # Examples
 /// ```rust
