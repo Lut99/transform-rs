@@ -10,7 +10,7 @@ transform = { git = "https://github.com/Lut99/transform-rs" }
 
 You can also commit yourself to a particular version by using the `tag`-key.
 ```toml
-transform = { git = "https://github.com/Lut99/transform-rs", tag = "v0.1.0" }
+transform = { git = "https://github.com/Lut99/transform-rs", tag = "v0.2.0" }
 ```
 
 
