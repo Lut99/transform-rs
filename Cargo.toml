@@ -5,3 +5,5 @@ edition = "2021"
 authors = [ "Lut99" ]
 description = "A small Rust library that defined the `Transform` iterator, which can map an element in a tuple to zero or more elements of a potentially different type."
 repository = "https://github.com/Lut99/transform-rs"
+license = "Apache-2.0"
+

@@ -36,7 +36,7 @@ This crate does not have any features.
 
 
 ## License
-This project is licensed under GPLv3. See [`LICENSE`](./LICENSE) for more information.
+This project is now licensed under Apache 2.0. See [`LICENSE`](./LICENSE) for more information.
 
 
 ## Contributing
