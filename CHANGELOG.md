@@ -4,11 +4,11 @@ This file keeps track of (notable) changes to the `transform`-crate.
 Note that this project uses [semantic versioning](https://semver.org). As such, breaking changes are indicated using \[**breaking**\].
 
 
-## v0.2.0 - TODO
-This update sees a change of license to the Apache 2.0 license. See [LICENSE](./LICENSE) for more details.
+## v0.2.0 - 2024-09-08
+This update sees a change of license to the Apache 2.0 license. See [LICENSE](./LICENSE) for more details \[**breaking**\].
 
 
-## v0.1.1 - 2021-10-31
+## v0.1.1 - 2023-10-31
 ### Changed
 - Slightly better documentation for the trait & iterator, which makes clear that the closure is only called for old elements.
 
